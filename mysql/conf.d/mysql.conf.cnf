@@ -1,0 +1,25 @@
+[mysqld]
+skip-name-resolve
+default_authentication_plugin = mysql_native_password
+
+# 主服务器唯一ID
+server_id = 1
+
+# 启用二进制日志
+log_bin = 1
+
+# 设置 binlog 格式
+binlog_format = ROW
+
+# 保留最近 30 天
+binlog_expire_logs_seconds = 2592000 
+
+# 单文件最大 1GB
+max_binlog_size = 1073741824
+
+# 最大连接数
+max_connections = 5000
+
+# 记录慢查询
+slow_query_log = 1
+long_query_time = 10
