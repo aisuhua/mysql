@@ -22,7 +22,7 @@ GRANT ALL PRIVILEGES ON `dbname`.* TO 'username'@'%';
 mydumper -h 127.0.0.1 -u root -p password -o mysql-$(date +%Y%m%dT%H%M%S)
 
 # 从全备中恢复指定库
-myloader -h 127.0.0.1 -u root -p password -d mysql-20230426T155441 --overwrite-tables --source-db=test
+myloader -h 127.0.0.1 -u root -p password -d mysql-20230426T155441 -s test --overwrite-tables
 
 # 恢复全部数据
 myloader -h 127.0.0.1 -u root -p password -d mysql-20230426T155441 --overwrite-tables
