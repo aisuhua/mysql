@@ -23,5 +23,3 @@ services:
         "--collation-server=utf8mb4_unicode_ci",
         "--lower_case_table_names=0"
       ]
-    #cap_add:
-    #  - SYS_NICE
