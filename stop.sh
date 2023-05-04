@@ -6,5 +6,4 @@ else
     IDC_NAME=lh1
 fi
 
-export IDC_NAME
-docker-compose down
+IDC_NAME=$IDC_NAME docker-compose down

@@ -8,7 +8,7 @@ services:
     image: mysql:8.0.29
     env_file:
       - "./config/env.common"
-      - "./config/env.${IDC_NAME}"
+      - "./config/env.${IDC_NAME:-dev}"
     restart: always
     ports:
       - 3306:3306
