@@ -7,13 +7,13 @@ services:
   mysql:
     image: mysql:8.0.29
     env_file:
-      - "./config/env.common"
-      - "./config/env.${IDC_NAME:-dev}"
+      - "./conf/common.env"
+      - "./conf/${IDC_NAME:-dev}/mysql.env"
     restart: always
     ports:
       - 3306:3306
     volumes:
-      - ./mysql/conf.d:/etc/mysql/conf.d
+      - "./conf/conf.d:/etc/mysql/conf.d"
       - data:/var/lib/mysql
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
